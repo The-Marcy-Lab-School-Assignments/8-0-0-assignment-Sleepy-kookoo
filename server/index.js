@@ -1,11 +1,6 @@
 const express = require('express')
 const app = express();
 
-const PORT = 8080
-app.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`)
-})
-
 const defaultController = (req, res, next) => {
   console.log(req.query)
   const { name, favoriteColor } = req.query
@@ -22,7 +17,7 @@ const serveHello = (req, res, next) => {
 }
 
 const serveData = (req, res, next) => {
-  const data = [{ name: 'america' }, { name: 'ryan' }, { name: 'cindy' }, { name: 'kevin' }];
+  const data = [{ name: 'america', age: '21' }, { name: 'ryan', age: "24" }, { name: 'cindy', age: "22" }, { name: 'kevin', age: "22" }];
   res.send(data);
 }
 
@@ -32,6 +27,11 @@ app.get('/home', homePage)
 app.get('/api/hello', serveHello);
 app.get('/api/data', serveData);
 
+
+const PORT = 8080
+app.listen(PORT, () => {
+  console.log(`Listening on http://localhost:${PORT}`)
+})
 
 
 
