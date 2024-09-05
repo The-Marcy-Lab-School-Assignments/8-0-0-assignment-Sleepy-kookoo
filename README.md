@@ -55,7 +55,7 @@ You got this!
 
 **Deployment Technical Requirements**
 
-- [ ] Your GitHub page has a link to the deployed server in the About section. 
+- [✓] Your GitHub page has a link to the deployed server in the About section. 
 
 ## Part 1 - Setup
 
